@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  div {
+    padding: 20px;
+  }
+  
+  nav {
+    text-align: center;
+    background: filled;
+    background-color: #333;
+    padding: 15px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav a:hover {
+    color: #f4a261;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #f4a261;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  h2 {
+    color: #666;
+  }
+  
+  .routes-container {
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .search-bar {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .no-results {
+    color: red;
+    font-size: 16px;
+  }
+  
+  .routes-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .code-container {
+    position: relative;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .code-container code {
+    font-family: monospace;
+    white-space: pre-wrap;
+    flex: 1;
+  }
+  
+  .copy-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .copy-btn:hover {
+    background: #0056b3;
+  }
+  
