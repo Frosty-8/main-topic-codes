@@ -12,13 +12,20 @@ body {
   }
   details {
     margin-top: 10px;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
   }
   summary {
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
     color: blue;
-    text-decoration: underline;
   }
   pre {
     background: #272822;
@@ -32,4 +39,17 @@ body {
   }
   hr {
     margin: 20px 0;
+  }
+  button {
+    background-color: #800080; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
   }

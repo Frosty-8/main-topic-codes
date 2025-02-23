@@ -1,4 +1,7 @@
-import React from 'react';
+import * as React from 'react';
+import Alert from "@mui/material/Alert";
+import CheckIcon from "@mui/icons-material/Check";
+import { Snackbar } from "@mui/material";
 import '../styles/main.css';
 
 export function Python() {
@@ -55,7 +58,6 @@ predictions = (model.predict(X_test) > 0.5).astype("int32")
 accuracy = accuracy_score(y_test, predictions)
 print(f"Accuracy Score: {accuracy * 100:.2f}%")
     `;
-
 
   const pCode2 = `
 import tensorflow as tf
@@ -262,13 +264,15 @@ test_loss, test_accuracy = model.evaluate(x_test, y_test, verbose=0)
 print(f"Test Accuracy: {test_accuracy * 100:.2f}%")
 `;
 
+  const [open,setOpen] = React.useState(false);
   const handleCopy = (code) => {
     navigator.clipboard.writeText(code);
-    alert('Code copied to clipboard!');
+    setOpen(true);
   };
 
   return (
     <div>
+      
       <details>
         <summary>Python Deep Learning Codes </summary>
         <details>
@@ -315,6 +319,21 @@ print(f"Test Accuracy: {test_accuracy * 100:.2f}%")
       <details>
         <summary>Python Machine Learning Codes </summary>
       </details>
+
+      <Snackbar
+        open={open}
+        autoHideDuration={5000}
+        onClose={() => setOpen(false)}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          icon={<CheckIcon fontSize="inherit" />}
+          severity="success"
+          onClose={() => setOpen(false)}
+        >
+          Code copied to clipboard!
+        </Alert>
+      </Snackbar>
 
     </div>
   );
