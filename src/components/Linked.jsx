@@ -65,6 +65,49 @@ public:
 }
   `;
 
+  const cppCode6 = `float linklist::find() {
+    if(head==NULL){
+        cout<<"List is empty"<<endl;
+    }
+    Node *t=head;
+    int maxval = t->data;
+    while(t!=NULL){
+        if(t->data < maxval){
+            maxval = t->data;
+        }
+        t=t->link;
+    }
+    return maxval;
+} `;
+
+  const cppCode7 = `void linklist::negative(){
+    if(head==NULL){
+        cout<<"List is empty\n"<<endl;
+    }
+    Node *t=head;
+    while(t!=NULL){
+        if(t->data < 0){
+            cout<< t->data << " ";
+        }
+        t=t->link;
+    }
+}
+  `;
+
+  const cppCode8 = `int linklist::search(int key){
+    Node *t=head;
+
+    while(t!=NULL){
+        if(t->data==key){
+            cout<<"key found";
+            return key;
+        }
+        t=t->link;
+    }
+    cout<<"key not found\n";
+  `;
+
+
   const handleCopy = (code) => {
     navigator.clipboard.writeText(code);
     alert('Code copied to clipboard!');
@@ -111,6 +154,31 @@ public:
         </pre>
         <button onClick={() => handleCopy(cppCode5)}>Copy Code</button>
       </details>
+
+      <details>
+        <summary>Code for finding maximum number in the List </summary>
+        <pre>
+          <code>{cppCode6}</code>
+        </pre>
+        <button onClick={() => handleCopy(cppCode6)}>Copy Code</button>
+      </details>
+
+      <details>
+        <summary>Code for displaying the negative no. in List </summary>
+        <pre>
+          <code>{cppCode7}</code>
+        </pre>
+        <button onClick={() => handleCopy(cppCode7)}>Copy Code</button>
+      </details>
+
+      <details>
+        <summary>Code for searching the no. in List </summary>
+        <pre>
+          <code>{cppCode8}</code>
+        </pre>
+        <button onClick={() => handleCopy(cppCode8)}>Copy Code</button>
+      </details>
+
 
 
     </div>
