@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,body{
+    background-color: rgb(47, 47, 47);
+    color:white;
+    overflow-y: scroll; /* Ensures content remains scrollable */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; 
+}
+html::-webkit-scrollbar ,
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
