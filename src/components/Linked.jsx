@@ -107,6 +107,79 @@ public:
     cout<<"key not found\n";
   `;
 
+  const cppCode9 = `void linklist::insertatHead(int x){
+    Node *t = new Node;
+    t->data = x;
+    t->link = head;
+    head=t;
+}`;
+
+  const cppCode10 = `int linklist::deletehead(){
+    Node *t = head;
+    head = t->link;
+    t->link = NULL;
+    delete t;
+}
+  `;
+
+  const cppCode11 = `void linklist::addrear(int y){
+    Node *nn = new Node;
+    nn->data=y;
+    nn->link = NULL;
+    Node *t=head;
+    while(t->link!=NULL){
+        t=t->link;
+    }t->link=nn;
+}
+  `;
+
+  const cppCode12 = `int linklist::deleterear(){
+    Node *t,*prev = NULL;
+    t=head;
+    int y;
+    if(head==NULL){
+        y=head->data;
+        delete head;
+        head=NULL;
+        return y;
+    }
+    while(t->link!=NULL){
+        prev=t;
+        t=t->link;
+    }prev->link=NULL;
+    y=t->data;
+    delete t;
+}
+  `;
+
+  const cppCode13 = `int linklist::insertatpos(int x,int pos){
+    Node *nn = new Node;
+    nn->data=x;
+    nn->link = NULL;
+
+    if(pos == 1){
+    nn->link = head;
+    head=nn;
+    return 0;
+    }
+
+    Node *t = head;
+    for(int i=1;i<pos -1 && t!=NULL;i++){
+        t=t->link;    
+    }
+
+    if(t==NULL){
+        cout << "Position not found;"<<endl;
+        delete nn;
+        return -1;
+    }
+    nn->link = t->link;
+    t->link = nn;
+    return 0;
+}
+
+  `;
+
 
   const handleCopy = (code) => {
     navigator.clipboard.writeText(code);
@@ -178,6 +251,47 @@ public:
         </pre>
         <button onClick={() => handleCopy(cppCode8)}>Copy Code</button>
       </details>
+
+      <details>
+        <summary>Code for Inserting at Head </summary>
+        <pre>
+          <code>{cppCode9}</code>
+        </pre>
+        <button onClick={() => handleCopy(cppCode9)}>Copy Code</button>
+      </details>
+
+      <details>
+        <summary>Code for Deleting Head </summary>
+        <pre>
+          <code>{cppCode10}</code>
+        </pre>
+        <button onClick={() => handleCopy(cppCode10)}>Copy Code</button>
+      </details>
+
+      <details>
+        <summary>Code for Adding Data at Rear</summary>
+        <pre>
+          <code>{cppCode11}</code>
+        </pre>
+        <button onClick={() => handleCopy(cppCode11)}>Copy Code</button>
+      </details>
+
+      <details>
+        <summary>Code for Deleting Rear </summary>
+        <pre>
+          <code>{cppCode12}</code>
+        </pre>
+        <button onClick={() => handleCopy(cppCode12)}>Copy Code</button>
+      </details>
+
+      <details>
+        <summary>Code for Deleting Rear </summary>
+        <pre>
+          <code>{cppCode13}</code>
+        </pre>
+        <button onClick={() => handleCopy(cppCode13)}>Copy Code</button>
+      </details>
+
 
 
 
